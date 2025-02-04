@@ -1,10 +1,11 @@
+/// <reference types="@types/google.maps" />
 import { User } from "./User";
-import { Company } from "./Company";
+import { CustomMap } from "./CustomMap";
 
-// create new random user
+// creates new map instance with 'map' argument
+const customMap = new CustomMap('map');
+// creates new instance of a user
 const user = new User();
-// create new random company
-const company = new Company();
+// calls the map class user marker method using the newly created user
+customMap.addUserMarker(user);
 
-console.log(user);
-console.log(company);
